@@ -31,8 +31,10 @@ test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
 
 print('\nTest accuracy:', test_acc)
 
-prediction = model.predict(test_images[0])
+predictions = model.predict(test_images)
 
-print(class_names[np.argmax(prediction)])
+for i in range(20):
+    print("predicted value: " + class_names[np.argmax(predictions[i])])
 
+    print("actual value: " + class_names[test_labels[i]] + "\n")
 
