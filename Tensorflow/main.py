@@ -38,6 +38,7 @@ for i in range(20):
     print("predicted value: " + class_names[np.argmax(predictions[i])])
 
     plt.imshow(test_images[i], cmap= plt.cm.get_cmap("binary"))
+    plt.show()
 
     print("actual value: " + class_names[test_labels[i]] + "\n")
 
